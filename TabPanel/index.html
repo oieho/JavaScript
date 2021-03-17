@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/tabpanel.css">
+    <style>
+        a:link {text-decoration:none; color:#000;}
+        a:visited {text-decoration:none; color:#000;}
+        a:active {text-decoration:none; color:#000;}
+        a:hover {text-decoration:none; color:#000;}
+        
+        #tabPanel1 {
+            left:100px;
+            top:100px;
+        }
+    </style>
+    
+    <script src="../libs/jquery-1.11.0.min.js"></script>
+    <script src="../libs/jquery.easing.1.3.js"></script>
+    <script src="tabpanel.js"></script>
+    <script>    
+        /*
+         * step #07
+         *      - jQuery 플러그인 제작 
+         * 
+         *      step #07-02
+         *          - 탭 패널 선택 플러그인 제작 
+         * 
+         *      step #07-01
+         *          - tabPanel 플러그인 제작 
+         * 
+         * step #06
+         *      - 캡슐화
+         * 
+         * step #05
+         *      옵션값 만들기
+         *      step #05-02
+         *          - 옵션값 적용
+         *      step #05-01
+         *          - 옵션값 만들기
+         * 
+         * step #04
+         *      다형성 적용하기  
+         *      step #04-04
+         *          - 다형성을 적용해 페이드 효과 만들기 
+         * 
+         *      step #04-03
+         *          - 다형성을 적용해 슬라이드 효과 만들기 
+         * 
+         *      step #04-02
+         *          - 다형성을 적용해 일반효과 만들기
+         * 
+         *      step #04-01
+         *          - effect 인터페이스 만들기 
+    
+         * step #03
+         *      - 탭 내용 출력하기     
+         * 
+         *      step #03-09
+         *          - 리팩토링4 : 중복 코드 없애기
+         * 
+         *      step #03-08
+         *          - 리팩토링3 : fade 효과를 메서드로 만들기
+         * 
+         *      step #03-07
+         *          - 리팩토링2 : slide 효과를 메서드로 만들기 
+         *  
+         *      step #03-06
+         *          - 릭팩토링1 : 일반 효과를 메서드로 만들기
+         * 
+         *      step #03-05
+         *          - 페이드 효과를 적용해 탭 내용 활성화
+         * 
+         *      step #03-04
+         *          - showContentAt() 메서드에 출력 효과 애니메이션 실행 유무 매개변수 추가
+         * 
+         *      stpe #03-03
+         *          - 슬라이드 효과를 적용해 탭 내용 활성화
+         * 
+         *      stpe #03-02
+         *          - 생성자에 effect 매개변수 추가
+         * 
+         *      step #03-01
+         *          - 효과 없이 탭 내용 활성화
+         *  
+         * step #02
+         *  - 탭 메뉴 만들기
+         * 
+         * step #01
+         *  - 레이아웃 잡기 
+         *
+         */
+        
+        $(document).ready(function(){
+            // step #07-01
+            $(".tab-panel").tabPanel({
+                effect:TabPanel.slideEffect,
+                startIndex:2
+            })
+            
+            // step #07-02    
+            $(".tab-panel").selectTabPanel(4);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="tab-panel" id="tabPanel1">      
+        <ul class="tab-menu">
+            <li><a href="#">google</a></li>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">pinterest</a></li>
+            <li><a href="#">twitter</a></li>                   
+            <li><a href="#">path</a></li>
+        </ul>
+        <div class="tab-contents-wrapper">
+            <div class="tab-contents">
+                <div class="content"><img src="../images//content_google.png" ></div>
+                <div class="content"><img src="../images//content_facebook.png" ></div>
+                <div class="content"><img src="../images//content_pinterest.png" ></div>
+                <div class="content"><img src="../images//content_twitter.png" ></div>
+                <div class="content"><img src="../images//content_path.png" ></div>         
+            </div>
+        </div>
+    </div>      
+</body>
+</html>
+

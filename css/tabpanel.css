@@ -1,0 +1,85 @@
+/* 메뉴 정의 */
+.tab-panel{	
+    font-size:20px;    
+    color:#000;
+	position: relative;
+	left:0px;
+	top:00px;
+	height:359px;   /* 44(tabmenu)-25(탭패널 위치) + 340px(tabPanel) */
+	width:780px;
+	
+	
+}
+
+
+
+ 
+.tab-panel ul.tab-menu{
+	height:44px; /* 탭메뉴 최대크기가 44(선택 탭메뉴 크기=44, 비선택 탭메뉴 크기 =40)*/
+	list-style: none;	
+	left:30px;
+	margin:0;
+	padding:0;
+	position: relative;
+    
+}
+
+.tab-panel ul.tab-menu li{
+    position: relative;
+    height:30px;
+    width:97px;		
+    float: left;
+    
+    background-image:url("../images/tab_resource.png");
+    background:no-repeat left:0 top:0;
+     z-index: 40;
+}
+
+.tab-panel ul.tab-menu li:hover
+{
+    background-position-y: -43px;
+}
+
+.tab-panel ul.tab-menu li.select  {
+    background-position-y: -86px;
+    	
+    z-index: 100;
+    height:44px;
+    margin-top:-5px;
+}
+
+
+.tab-panel ul.tab-menu li a {
+	width:100%;
+	display:block;
+	
+	text-align: center;
+	margin-top:8px;
+}
+
+
+.tab-panel .tab-contents-wrapper {
+    background:url(../images/content_bg.png) no-repeat;
+    position:relative;
+    margin-top:-18px;
+    width:780px;
+    height:340px;
+    z-index: 50;
+}
+
+.tab-panel .tab-contents-wrapper .tab-contents {
+    position:relative;
+    left:10px;
+    top:10px;
+    width:760px;
+    height:310px;
+    overflow:hidden;
+}
+
+.tab-panel .tab-contents-wrapper .tab-contents .content{
+    position: absolute;
+    left:0px;
+    top:0px;
+    opacity:0;
+}
+
