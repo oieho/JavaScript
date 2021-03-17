@@ -1,3 +1,6 @@
+<!-- 출처 : 자바스크립트 + jQuery 완전정복 스터디 3
+-->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html>
@@ -95,11 +98,16 @@
             // step #07-01
             $(".tab-panel").tabPanel({
                 effect:TabPanel.slideEffect,
-                startIndex:2
+                startIndex:null
             })
             
             // step #07-02    
-            $(".tab-panel").selectTabPanel(4);
+            $(".tab-panel").selectTabPanel({
+                effects:TabPanel.fadeEffect,
+                startIndex:3,
+                duration:4000,
+                easing:"easeInCubic"
+            });
         });
     </script>
 </head>
